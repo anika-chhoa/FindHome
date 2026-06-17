@@ -1,2 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @import "tailwindcss";
 @import "@heroui/styles";
+
+
+:root {
+  --background: 0 0% 98%;
+  --foreground: 0 0% 7%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 7%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 7%;
+
+  --primary: 42 52% 55%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 0 0% 93%;
+  --secondary-foreground: 0 0% 9%;
+
+  --muted: 0 0% 95%;
+  --muted-foreground: 0 0% 40%;
+
+  --accent: 42 52% 55%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 42 52% 55%;
+
+  --radius: 0.75rem;
+
+  /* Custom Gold System */
+  --gold: 42 52% 55%;
+  --gold-light: 42 60% 70%;
+  --surface: 0 0% 96%;
+
+  /* Fonts */
+  --font-heading: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Inter Tight', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark {
+  --background: 0 0% 4%;
+  --foreground: 0 0% 95%;
+
+  --card: 0 0% 6%;
+  --card-foreground: 0 0% 95%;
+
+  --popover: 0 0% 6%;
+  --popover-foreground: 0 0% 95%;
+
+  --primary: 42 65% 52%;
+  --primary-foreground: 0 0% 4%;
+
+  --secondary: 0 0% 10%;
+  --secondary-foreground: 0 0% 95%;
+
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 55%;
+
+  --accent: 42 65% 52%;
+  --accent-foreground: 0 0% 4%;
+
+  --border: 0 0% 14%;
+  --input: 0 0% 14%;
+  --ring: 42 65% 52%;
+
+  --gold: 42 65% 52%;
+  --gold-light: 42 50% 40%;
+  --surface: 0 0% 8%;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
